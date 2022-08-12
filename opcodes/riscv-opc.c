@@ -1725,6 +1725,17 @@ const struct riscv_opcode riscv_opcodes[] =
 {"vmv4r.v",    0, INSN_CLASS_V, "Vd,Vt", MATCH_VMV4RV, MASK_VMV4RV, match_opcode, 0},
 {"vmv8r.v",    0, INSN_CLASS_V, "Vd,Vt", MATCH_VMV8RV, MASK_VMV8RV, match_opcode, 0},
 
+/* rvv-gpgpu custom instructions */
+{"join",      0, INSN_CLASS_I, "Vt,Vs,p", MATCH_JOIN, MASK_JOIN, match_opcode, 0},
+{"endprg",    0, INSN_CLASS_I, "d,s,t", MATCH_ENDPRG, MASK_ENDPRG, match_opcode, 0},
+{"barrier",   0, INSN_CLASS_I, "d,s,t", MATCH_BARRIER, MASK_BARRIER, match_opcode, 0},
+{"vbeq",      0, INSN_CLASS_I, "Vt,Vs,p", MATCH_VBEQ, MASK_VBEQ, match_opcode, 0},
+{"vbne",      0, INSN_CLASS_I, "Vt,Vs,p", MATCH_VBNE, MASK_VBNE, match_opcode, 0},
+{"vblt",      0, INSN_CLASS_I, "Vt,Vs,p", MATCH_VBLT, MASK_VBLT, match_opcode, 0},
+{"vbge",      0, INSN_CLASS_I, "Vt,Vs,p", MATCH_VBGE, MASK_VBGE, match_opcode, 0},
+{"vbltu",     0, INSN_CLASS_I, "Vt,Vs,p", MATCH_VBLTU, MASK_VBLTU, match_opcode, 0},
+{"vbgeu",     0, INSN_CLASS_I, "Vt,Vs,p", MATCH_VBGEU, MASK_VBGEU, match_opcode, 0},
+
 /* Svinval instructions.  */
 {"sinval.vma",      0, INSN_CLASS_SVINVAL, "s,t", MATCH_SINVAL_VMA, MASK_SINVAL_VMA, match_opcode, 0 },
 {"sfence.w.inval",  0, INSN_CLASS_SVINVAL, "",    MATCH_SFENCE_W_INVAL, MASK_SFENCE_W_INVAL, match_opcode, 0 },
