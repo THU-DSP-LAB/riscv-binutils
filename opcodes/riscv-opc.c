@@ -1756,8 +1756,8 @@ const struct riscv_opcode riscv_opcodes[] =
 {"vbltu",     0, INSN_CLASS_V, "Vt,Vs,p", MATCH_VBLTU, MASK_VBLTU, match_opcode, 0},
 {"vbgeu",     0, INSN_CLASS_V, "Vt,Vs,p", MATCH_VBGEU, MASK_VBGEU, match_opcode, 0},
 {"join",      0, INSN_CLASS_V, "Vt,Vs,p", MATCH_JOIN, MASK_JOIN, match_opcode, 0},
-{"vftta.vv",0,INSN_CLASS_V,"Vd,Vs,Vt",MATCH_VFTTA_VV,MASK_VFTTA_VV, match_opcode, 0},
-{"vfexp.v",0,INSN_CLASS_V,"Vd,Vs",MATCH_VFEXP_V,MASK_VFEXP_V, match_opcode, 0},
+{"vftta.vv",0,INSN_CLASS_V,"Vd,Vs,VtVm",MATCH_VFTTA_VV,MASK_VFTTA_VV, match_opcode, 0},
+{"vfexp.v",0,INSN_CLASS_V,"Vd,VtVm",MATCH_VFEXP_V,MASK_VFEXP_V, match_opcode, 0},
 
 
 /* Svinval instructions.  */
